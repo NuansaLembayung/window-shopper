@@ -61,22 +61,57 @@
                                     <constraint firstAttribute="width" constant="300" id="1yU-Up-dRZ"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07D-rX-iIz">
+                                <rect key="frame" x="157.5" y="335" width="60.5" height="74"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="54"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrI-SB-UHt">
+                                <rect key="frame" x="158" y="409" width="59.5" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fv9-Y9-6py">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="l6W-nG-lIn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skM-6Z-iaq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Q0O-4J-Ti9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0W5-jz-G3y"/>
+                            <constraint firstItem="VrI-SB-UHt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3n1-EP-p0a"/>
+                            <constraint firstItem="Fv9-Y9-6py" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6l5-xf-E7c"/>
+                            <constraint firstItem="VrI-SB-UHt" firstAttribute="top" secondItem="07D-rX-iIz" secondAttribute="bottom" id="9lx-Zw-N9K"/>
+                            <constraint firstItem="07D-rX-iIz" firstAttribute="top" secondItem="SxN-CK-mCU" secondAttribute="bottom" constant="50" id="9sq-cT-Qlu"/>
+                            <constraint firstItem="07D-rX-iIz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CBC-sK-ZeN"/>
                             <constraint firstItem="Gfz-qi-3vE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="EjX-wW-J14"/>
                             <constraint firstItem="SxN-CK-mCU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IXx-LN-lxd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Fv9-Y9-6py" secondAttribute="bottom" id="WQa-Hx-J9a"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Q0O-4J-Ti9" secondAttribute="bottom" id="c4c-0X-y16"/>
                             <constraint firstItem="Gfz-qi-3vE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dO4-QU-sf5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q0O-4J-Ti9" secondAttribute="trailing" id="gvQ-lJ-qqV"/>
                             <constraint firstItem="SxN-CK-mCU" firstAttribute="top" secondItem="Gfz-qi-3vE" secondAttribute="bottom" constant="50" id="j2H-5y-Ckz"/>
                             <constraint firstItem="Q0O-4J-Ti9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oO3-Q5-TLy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fv9-Y9-6py" secondAttribute="trailing" id="wfc-og-YVO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="VrI-SB-UHt" id="fys-uT-H1H"/>
                         <outlet property="priceTxt" destination="cy3-hH-8LP" id="afb-dg-adO"/>
+                        <outlet property="resultLbl" destination="07D-rX-iIz" id="5WK-CJ-hkq"/>
                         <outlet property="wageTxt" destination="yxd-z3-Rc1" id="gLF-yK-W1E"/>
                     </connections>
                 </viewController>
